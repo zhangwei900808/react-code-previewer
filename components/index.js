@@ -1,4 +1,4 @@
-import CodePreview from "./code-previewer";
+import CodePreviewer from "./code-previewer";
 
-export { CodePreview };
-export default { CodePreview };
+export { CodePreviewer };
+export default { CodePreviewer };
