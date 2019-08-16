@@ -1,6 +1,6 @@
-import CodePreview from "./code-previewer";
-export { CodePreview };
+import CodePreviewer from "./code-previewer";
+export { CodePreviewer };
 export default {
-  CodePreview: CodePreview
+  CodePreviewer: CodePreviewer
 };
 //# sourceMappingURL=index.js.map
