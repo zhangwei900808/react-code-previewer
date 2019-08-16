@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["code-previewer/style/index.scss"],"sourcesContent":[".code-preview-container {\n  .cp-component {\n    .component-header {}\n\n    .component-content {}\n\n    .component-footer {}\n  }\n\n  .cp-code {\n    .code-header {}\n\n    .code-tabs {}\n\n    .code-content {}\n  }\n}\n"],"file":"index.scss"}

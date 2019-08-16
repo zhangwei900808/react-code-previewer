@@ -19,4 +19,22 @@
     |-- dist
     |   |-- react-code-previewer.min.js
     |   |-- react-code-previewer.min.js.map
+    |-- es
+    |   |-- index.js
+    |   |-- index.js.map
+    |   |-- code-previewer
+    |       |-- index.js
+    |       |-- index.js.map
+    |       |-- style
+    |           |-- index.js
+    |           |-- index.js.map
+    |-- lib
+    |   |-- index.js
+    |   |-- index.js.map
+    |   |-- code-previewer
+    |       |-- index.js
+    |       |-- index.js.map
+    |       |-- style
+    |           |-- index.js
+    |           |-- index.js.map
     |-- src

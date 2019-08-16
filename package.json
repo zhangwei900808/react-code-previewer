@@ -4,8 +4,11 @@
   "description": "基于 react 和 antd 的代码预览器组件",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:umd": "webpack --mode production --config .react-code-previewer/webpack.config.umd.js"
+    "build:css": "cd .react-code-previewer && gulp compile",
+    "build:umd": "cross-env BABEL_ENV=umd webpack --mode production --config .react-code-previewer/webpack.config.umd.js",
+    "build:commonjs": "rimraf lib && cross-env BABEL_ENV=commonjs babel components -d lib --source-maps",
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel components -d es --source-maps",
+    "build:all": "yarn build:umd && yarn build:commonjs && yarn build:es && yarn build:css"
   },
   "repository": {
     "type": "git",
@@ -31,8 +34,18 @@
     "@babel/runtime": "^7.5.5",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^5.2.0",
     "css-loader": "^3.2.0",
     "fs": "^0.0.1-security",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-filesize": "^0.0.6",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
     "mini-css-extract-plugin": "^0.8.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "path": "^0.12.7",
