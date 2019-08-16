@@ -8,7 +8,7 @@ npm install react-code-previewer
 ```
 
 ```
-import reactCodePreviewer from 'react-code-previewer'
+import { CodePreviewer } from "react-code-previewer";
 ```
 
 ## contact me
