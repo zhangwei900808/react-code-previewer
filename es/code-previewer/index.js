@@ -13,7 +13,7 @@ function (_Component) {
   var _proto = CodePreviewer.prototype;
 
   _proto.render = function render() {
-    React.createElement("div", {
+    return React.createElement("div", {
       className: "code-preview-container"
     }, React.createElement("div", {
       className: "cp-component"
