@@ -3,6 +3,7 @@
   "version": "0.0.2",
   "description": "基于 react 和 antd 的代码预览器组件",
   "main": "lib/index.js",
+  "module": "es/index.js",
   "scripts": {
     "build:css": "cd .react-code-previewer && gulp compile",
     "build:umd": "cross-env BABEL_ENV=umd webpack --mode production --config .react-code-previewer/webpack.config.umd.js",
