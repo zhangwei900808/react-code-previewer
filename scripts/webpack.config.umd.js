@@ -33,7 +33,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(sa|sc|c)ss$/,
+        test: /\.(pc|sc|c)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -43,7 +43,7 @@ module.exports = {
             }
           },
           {
-            loader: "sass-loader",
+            loader: "postcss-loader",
             options: {
               sourceMap: true
             }
@@ -74,7 +74,7 @@ module.exports = {
       cacheGroups: {
         styles: {
           name: "styles",
-          test: /\.scss$/,
+          test: /\.pcss$/,
           chunks: "all",
           enforce: true
         }
@@ -90,6 +90,8 @@ module.exports = {
         assetNameRegExp: /\.css\.*(?!.*map)/g, //注意不要写成 /\.css$/g
         cssProcessor: require("cssnano"),
         cssProcessorOptions: {
+          //生成.css.map 文件
+          map: true,
           discardComments: { removeAll: true },
           safe: true,
           autoprefixer: false

@@ -1,19 +1,21 @@
-.code-preview-container .cp-component .component-header {
-  color: red; }
 
-.code-preview-container .cp-component .component-content {
-  color: green; }
-
-.code-preview-container .cp-component .component-footer {
-  color: yellow; }
-
-.code-preview-container .cp-code .code-header {
-  color: red; }
-
-.code-preview-container .cp-code .code-tabs {
-  color: green; }
-
-.code-preview-container .cp-code .code-content {
-  color: yellow; }
+    .code-preview-container.cp-component.component-header {
+      color: red;
+    }
+.code-preview-container.cp-component.component-content {
+      color: green;
+    }
+.code-preview-container.cp-component.component-footer {
+      color: yellow;
+    }
+.code-preview-container.cp-code.code-header {
+      color: red;
+    }
+.code-preview-container.cp-code.code-tabs {
+      color: green;
+    }
+.code-preview-container.cp-code.code-content {
+      color: yellow;
+    }
 
 /*# sourceMappingURL=react-code-previewer.css.map */
