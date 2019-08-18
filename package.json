@@ -10,7 +10,6 @@
     "build:commonjs": "rimraf lib && cross-env BABEL_ENV=commonjs babel components -d lib --source-maps",
     "build:es": "rimraf es && cross-env BABEL_ENV=es babel components -d es --source-maps",
     "build:all": "yarn build:umd && yarn build:commonjs && yarn build:es && yarn build:css",
-
     "build:prod": "cross-env BABEL_ENV=preview webpack --mode production --config scripts/webpack.config.prod.js",
     "start": "cross-env BABEL_ENV=preview webpack-dev-server --port 3001 --open --config scripts/webpack.config.dev.js",
     "deploy": "yarn build:prod && gh-pages -d build"
@@ -43,6 +42,7 @@
     "cross-env": "^5.2.0",
     "css-loader": "^3.2.0",
     "fs": "^0.0.1-security",
+    "gh-pages": "^2.1.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-clean-css": "^4.2.0",
