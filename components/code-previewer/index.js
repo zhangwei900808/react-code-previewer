@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Button } from "antd";
 
 class CodePreviewer extends Component {
   render() {
@@ -13,6 +14,9 @@ class CodePreviewer extends Component {
           <div className="code-header">code header</div>
           <div className="code-tabs">code tabs</div>
           <div className="code-content">code content</div>
+        </div>
+        <div>
+          <Button type="primary"> 测试</Button>
         </div>
       </div>
     );

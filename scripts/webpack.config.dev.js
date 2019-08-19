@@ -1,3 +1,4 @@
+const fs = require("fs");
 const path = require("path");
 const webpack = require("webpack");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
@@ -7,20 +8,20 @@ const nodeExternals = require("webpack-node-externals");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const postcssPresetEnv = require("postcss-preset-env");
-const { version, name, description } = require("../package.json");
 
 const resolve = dir => path.join(__dirname, ".", dir);
 const isProd = process.env.NODE_ENV === "production";
-const buildDir = path.join(process.cwd(), "build");
+const { version, name, description } = require("../package.json");
+const docsDir = path.join(process.cwd(), "docs");
 
 module.exports = {
   mode: "development",
-  // 预览
-  entry: { main: "./src/index.js" },
+  entry: { [name]: "./src/index.js" },
   output: {
     // path: resolve("dist"), // 输出目录
-    path: buildDir,
-    filename: "[name].min.js",
+    path: docsDir,
+    filename: "static/js/[name].min.js",
+    chunkFilename: "static/js/[name].chunk.js",
     umdNamedDefine: true, // 是否将模块名称作为 AMD 输出的命名空间
     //不加下面几行，被引用会被报错
     libraryTarget: "umd", // 采用通用模块定义
@@ -84,7 +85,8 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].css"
+      filename: "static/css/[name].min.css",
+      chunkFilename: "static/css/[name].chunk.css"
     }),
     //预览
     new HtmlWebpackPlugin({
@@ -107,15 +109,8 @@ module.exports = {
         assetNameRegExp: /\.css\.*(?!.*map)/g, //注意不要写成 /\.css$/g
         cssProcessor: require("cssnano"),
         cssProcessorOptions: {
-          //生成.css.map 文件
-          map: true,
           discardComments: { removeAll: true },
-          // 避免 cssnano 重新计算 z-index
           safe: true,
-          // cssnano 集成了autoprefixer的功能
-          // 会使用到autoprefixer进行无关前缀的清理
-          // 关闭autoprefixer功能
-          // 使用postcss的autoprefixer功能
           autoprefixer: false
         },
         canPrint: true

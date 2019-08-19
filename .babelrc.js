@@ -25,7 +25,17 @@ switch (babel_env) {
 // (import "babel-polyfill"）的话，插件 会根据 targets 的配置，重写 import "babel-polyfill" ，
 //只引入对应环境必须的 "babel-polyfill" 的子模块，减少了多余的代码引入
 const presets = [["@babel/preset-env", { loose, modules }], "@babel/preset-react"];
-const plugins = ["@babel/plugin-proposal-object-rest-spread", ["@babel/plugin-transform-runtime", { useESModules }]];
+const plugins = [
+  "@babel/plugin-proposal-class-properties",
+  "@babel/plugin-proposal-object-rest-spread",
+  ["@babel/plugin-transform-runtime", { useESModules }],
+  [
+    "@babel/plugin-proposal-decorators",
+    {
+      legacy: true
+    }
+  ]
+];
 // 预览情况下添加对 antd 按需加载样式的支持
 if (babel_env === "preview") {
   plugins.push([
