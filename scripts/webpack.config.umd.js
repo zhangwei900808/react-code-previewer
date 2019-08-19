@@ -5,6 +5,7 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const nodeExternals = require("webpack-node-externals");
+const postcssPresetEnv = require("postcss-preset-env");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const resolve = dir => path.join(__dirname, ".", dir);
@@ -45,7 +46,18 @@ module.exports = {
           {
             loader: "postcss-loader",
             options: {
-              sourceMap: true
+              ident: "postcss",
+              sourceMap: true,
+              plugins: () => [
+                postcssPresetEnv({
+                  stage: 3,
+                  features: {
+                    "custom-properties": true,
+                    "nesting-rules": true
+                  },
+                  browsers: "last 2 versions"
+                })
+              ]
             }
           }
         ]
@@ -70,16 +82,6 @@ module.exports = {
   ],
   //压缩js
   optimization: {
-    splitChunks: {
-      cacheGroups: {
-        styles: {
-          name: "styles",
-          test: /\.pcss$/,
-          chunks: "all",
-          enforce: true
-        }
-      }
-    },
     minimizer: [
       new UglifyJsPlugin({
         cache: true,
