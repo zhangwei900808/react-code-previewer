@@ -9,7 +9,7 @@ yarn add react-code-previewer
 ## Usage
 
 ```jsx
-import { CodePreviewer, MarkdownPreviewer, PreviewLayout } from "react-code-previewer";
+import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
 ReactDOM.render(
   <PreviewLayout>
     <MdPreviewer md={installMd}></MdPreviewer>
