@@ -11,6 +11,7 @@ npm install react-code-previewer
 
 ```jsx
 import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";
+
 ReactDOM.render(
   <PreviewLayout>
     <MdPreviewer md={installMd}></MdPreviewer>
@@ -34,10 +35,10 @@ npm install -D raw-loader
 
 ```javascript
  rules: [
-      {
+    {
         test: /\.md$/,
         use: "raw-loader"
-      },
+    },
 ```
 
 ## contact me
