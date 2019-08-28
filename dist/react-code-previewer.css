@@ -486,10 +486,6 @@ template {
       transition: height 800ms ease-in-out 0ms;
     }
 
-.ant-layout-header {
-  background: #001529 !important;
-}
-
 pre {
   background: none !important;
   font-size: 14px !important
