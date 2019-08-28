@@ -24,7 +24,7 @@ ReactDOM.render(
 );
 ```
 
-## Webpack
+## Setting
 
 如果是要引入.md 文件，要在 webpack.config.js 文件加入下面这段代码，如下所示：
 
