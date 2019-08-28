@@ -40,12 +40,17 @@ class CodePreviewerPage extends Component {
     window.location.href = "https://github.com/zhangwei900808/react-code-previewer";
   };
   render() {
-    const mdCode = 'import markdownMd from "../md/markdown.md";\n\n<MdPreviewer md={markdownMd}></MdPreviewer>';
-    const buttonCode = `<CodePreviewer code={code} showCode={true}>
-    <Button type="primary" size="large">
-      primary
-    </Button>
-  </CodePreviewer>`;
+    const mdCode = `import markdownMd from "../md/markdown.md";
+import { MdPreviewer } from "react-code-previewer";
+
+<MdPreviewer md={markdownMd}></MdPreviewer>`;
+    const buttonCode = `import { CodePreviewer } from "react-code-previewer";
+    
+<CodePreviewer code={code} showCode={true}>
+  <Button type="primary" size="large">
+    primary
+  </Button>
+</CodePreviewer>`;
     return (
       <Layout>
         <Header className="header-container">
