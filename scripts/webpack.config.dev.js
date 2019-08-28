@@ -17,19 +17,23 @@ const docsDir = path.join(process.cwd(), "docs");
 module.exports = {
   mode: "development",
   entry: { [name]: "./src/index.js" },
-  output: {
-    // path: resolve("dist"), // 输出目录
-    path: docsDir,
-    filename: "static/js/[name].min.js",
-    chunkFilename: "static/js/[name].chunk.js",
-    umdNamedDefine: true, // 是否将模块名称作为 AMD 输出的命名空间
-    //不加下面几行，被引用会被报错
-    libraryTarget: "umd", // 采用通用模块定义
-    library: [name]
-  },
+  // output: {
+  //   // path: resolve("dist"), // 输出目录
+  //   path: docsDir,
+  //   filename: "static/js/[name].min.js",
+  //   chunkFilename: "static/js/[name].chunk.js",
+  //   umdNamedDefine: true, // 是否将模块名称作为 AMD 输出的命名空间
+  //   //不加下面几行，被引用会被报错
+  //   libraryTarget: "umd", // 采用通用模块定义
+  //   library: [name]
+  // },
   devtool: "#source-map",
   module: {
     rules: [
+      {
+        test: /\.md$/,
+        use: "raw-loader"
+      },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
@@ -45,7 +49,11 @@ module.exports = {
             loader: "style-loader"
           },
           {
-            loader: "css-loader"
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+              importLoaders: 1
+            }
           },
           {
             loader: "postcss-loader",
@@ -76,6 +84,10 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.(woff|svg|eot|ttf)\??.*$/,
+        use: ["file-loader"]
       }
     ]
   },

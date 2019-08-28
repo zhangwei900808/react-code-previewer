@@ -1,0 +1,1 @@
+{"version":3,"sources":["md-previewer/style/index.pcss"],"names":[],"mappings":"AAAA,8BACE,MAAA","file":"index.css","sourcesContent":[".markdown-previewer-container {\n  color: #0d1a26;\n}\n"]}

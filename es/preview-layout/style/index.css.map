@@ -1,0 +1,1 @@
+{"version":3,"sources":["preview-layout/style/index.pcss"],"names":[],"mappings":"AAAA,0BACE,WAAA,KACA,cAAA,KACA,QAAA,KAAA","file":"index.css","sourcesContent":[".preview-layout-container {\n  background: #fff;\n  margin-bottom: 1rem;\n  padding: 1rem 3rem;\n}\n"]}

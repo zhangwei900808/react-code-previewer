@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["preview-layout/style/index.pcss"],"sourcesContent":[".preview-layout-container {\n  background: #fff;\n  margin-bottom: 1rem;\n  padding: 1rem 3rem;\n}\n"],"file":"index.pcss"}
