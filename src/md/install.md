@@ -6,6 +6,11 @@
 yarn add react-code-previewer
 ```
 
+<span style="color:red; font-family:Helvetica Neue, Helvetica, Arial, sans-serif; font-size:2em;">sdfsdf
+</span>
+
+<h1>ddd</h1>
+
 ## Usage
 
 ```jsx
