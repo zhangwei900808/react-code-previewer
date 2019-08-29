@@ -1,5 +1,9 @@
 # react-code-previewer &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/zhangwei900808/react-code-previewer) [![npm version](https://img.shields.io/npm/v/react-code-previewer.svg)](https://www.npmjs.com/package/react-code-previewer)
 
+## Doc
+
+[react-code-previewer doc](http://awbeci.xyz/react-code-previewer/)
+
 ## Install
 
 ```
