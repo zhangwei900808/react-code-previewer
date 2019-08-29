@@ -5,6 +5,8 @@ import cls from "classnames";
 import ReactMarkdown from "react-markdown";
 import CodeBlock from "../code-block";
 
+var htmlParser = require("react-markdown/plugins/html-parser");
+
 var MarkdownPreviewer =
 /*#__PURE__*/
 function (_PureComponent) {
@@ -18,11 +20,20 @@ function (_PureComponent) {
 
   _proto.render = function render() {
     var md = this.props.md;
+    var parseHtml = htmlParser({
+      isValidNode: function isValidNode(node) {
+        return node.type !== "script";
+      },
+      processingInstructions: [
+        /* ... */
+      ]
+    });
     return React.createElement("div", {
       className: "markdown-previewer-container"
     }, React.createElement(ReactMarkdown, {
       source: md,
-      escapeHtml: false,
+      escapeHtml: false // astPlugins={[parseHtml]}
+      ,
       renderers: {
         code: CodeBlock
       }
