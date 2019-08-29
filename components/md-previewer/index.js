@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown";
 import CodeBlock from "../code-block";
 const htmlParser = require("react-markdown/plugins/html-parser");
 
-class MarkdownPreviewer extends PureComponent {
+class MdPreviewer extends PureComponent {
   render() {
     const { md } = this.props;
     const parseHtml = htmlParser({
@@ -29,12 +29,12 @@ class MarkdownPreviewer extends PureComponent {
   }
 }
 
-MarkdownPreviewer.propTypes = {
+MdPreviewer.propTypes = {
   md: PropTypes.string.isRequired
 };
 
-MarkdownPreviewer.defaultProps = {
+MdPreviewer.defaultProps = {
   md: null
 };
 
-export default MarkdownPreviewer;
+export default MdPreviewer;

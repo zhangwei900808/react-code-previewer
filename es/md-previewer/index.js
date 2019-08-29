@@ -7,16 +7,16 @@ import CodeBlock from "../code-block";
 
 var htmlParser = require("react-markdown/plugins/html-parser");
 
-var MarkdownPreviewer =
+var MdPreviewer =
 /*#__PURE__*/
 function (_PureComponent) {
-  _inheritsLoose(MarkdownPreviewer, _PureComponent);
+  _inheritsLoose(MdPreviewer, _PureComponent);
 
-  function MarkdownPreviewer() {
+  function MdPreviewer() {
     return _PureComponent.apply(this, arguments) || this;
   }
 
-  var _proto = MarkdownPreviewer.prototype;
+  var _proto = MdPreviewer.prototype;
 
   _proto.render = function render() {
     var md = this.props.md;
@@ -40,14 +40,14 @@ function (_PureComponent) {
     }));
   };
 
-  return MarkdownPreviewer;
+  return MdPreviewer;
 }(PureComponent);
 
-MarkdownPreviewer.propTypes = {
+MdPreviewer.propTypes = {
   md: PropTypes.string.isRequired
 };
-MarkdownPreviewer.defaultProps = {
+MdPreviewer.defaultProps = {
   md: null
 };
-export default MarkdownPreviewer;
+export default MdPreviewer;
 //# sourceMappingURL=index.js.map
