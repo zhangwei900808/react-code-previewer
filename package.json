@@ -1,6 +1,6 @@
 {
   "name": "react-code-previewer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "基于 react 和 antd 的代码预览器组件",
   "main": "lib/index.js",
   "module": "es/index.js",
