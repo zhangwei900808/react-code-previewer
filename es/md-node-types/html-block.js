@@ -3,8 +3,7 @@ import _inheritsLoose from "@babel/runtime/helpers/esm/inheritsLoose";
 import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
-import cls from "classnames";
-import ReactHtmlParser from "react-html-parser";
+import cls from "classnames"; // import ReactHtmlParser from "react-html-parser";
 
 var HtmlBlock =
 /*#__PURE__*/
@@ -21,12 +20,12 @@ function (_PureComponent) {
     _this = _PureComponent.call.apply(_PureComponent, [this].concat(args)) || this;
 
     _defineProperty(_assertThisInitialized(_this), "renderHtml", function () {
-      // console.log("--- this.props ---", this.props);
+      console.log("--- this.props ---", _this.props);
       var _this$props = _this.props,
           value = _this$props.value,
           children = _this$props.children;
 
-      if (value.includes("html")) {
+      if (value.includes("h2")) {
         var nodeValue = value.replace(/<[^<>]+>/g, ""); //如果节点内容为空，就什么也不做
 
         if (nodeValue === "") {
@@ -43,8 +42,9 @@ function (_PureComponent) {
           href: "#" + nodeValue
         }, "#"));
       } else {
-        //如果不是 <html></html> 节点 ，那么就是其他的 html 类型节点，我们转换成 html 节点再返回
-        return React.createElement(React.Fragment, null, ReactHtmlParser(value));
+        console.log("encodeURI()", value.replace("<")); //如果不是 <html></html> 节点 ，那么就是其他的 html 类型节点，我们转换成 html 节点再返回
+
+        return React.createElement(React.Fragment, null, value);
       }
     });
 
@@ -54,7 +54,11 @@ function (_PureComponent) {
   var _proto = HtmlBlock.prototype;
 
   _proto.render = function render() {
-    return React.createElement(React.Fragment, null, this.renderHtml());
+    console.log("--- this.props ---", this.props);
+    var _this$props2 = this.props,
+        value = _this$props2.value,
+        children = _this$props2.children;
+    return React.createElement(React.Fragment, null, children);
   };
 
   return HtmlBlock;

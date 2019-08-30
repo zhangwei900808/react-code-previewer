@@ -1,3 +1,27 @@
 .markdown-previewer-container {
   color: #0d1a26;
+
+  & h2 {
+    &::before {
+      display: block;
+      height: 5rem;
+      margin-top: -5rem;
+      content: "";
+    }
+
+    &:hover {
+      & a {
+        opacity: 1;
+      }
+    }
+
+    & .title {}
+
+    & a {
+      display: inline-block;
+      opacity: 0;
+      transition: opacity .3s ease;
+    }
+  }
+
 }

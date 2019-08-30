@@ -1,4 +1,4 @@
-<html>Api</html>
+<h2 id="Api"><span>Api</span> <a href="#Api">#</a></h2>
 
 ### PreviewLayout
 

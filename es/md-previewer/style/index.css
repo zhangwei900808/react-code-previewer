@@ -1,2 +1,2 @@
-.markdown-previewer-container{color:#0d1a26}
+.markdown-previewer-container{color:#0d1a26}.markdown-previewer-container h2::before{display:block;height:5rem;margin-top:-5rem;content:""}.markdown-previewer-container h2:hover a{opacity:1}.markdown-previewer-container h2 a{display:inline-block;opacity:0;-webkit-transition:opacity .3s ease;transition:opacity .3s ease}
 /*# sourceMappingURL=index.css.map */

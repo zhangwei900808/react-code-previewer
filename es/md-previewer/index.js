@@ -51,8 +51,8 @@ function (_PureComponent) {
       escapeHtml: false // astPlugins={[parseHtml]}
       ,
       renderers: {
-        code: CodeBlock,
-        html: HtmlBlock
+        code: CodeBlock // heading: HtmlBlock
+
       }
     }));
   };
