@@ -62,7 +62,7 @@ import { MdPreviewer } from "react-code-previewer";
             <Icon type="github" style={{ fontSize: "28px" }} />
           </div>
         </Header>
-        <Content style={{ marginTop: 64, padding: "2rem 15rem" }}>
+        <Content style={{ padding: "2rem 15rem" }}>
           <div style={{ minHeight: "100vh" }}>
             <PreviewLayout>
               <MdPreviewer md={installMd}></MdPreviewer>

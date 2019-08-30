@@ -1,12 +1,14 @@
-# react-code-previewer
+# React-Code-Previewer
 
-## Install
+基于 React 的代码演示组件，方便开发人员发布自己的组件库预览组件及代码。
+
+<html>Install</html>
 
 ```javascript
 yarn add react-code-previewer
 ```
 
-## Usage
+<html>Usage</html>
 
 ```jsx
 import { CodePreviewer, MdPreviewer, PreviewLayout } from "react-code-previewer";

@@ -27,10 +27,12 @@ function (_PureComponent) {
     var _this$props = this.props,
         language = _this$props.language,
         value = _this$props.value;
-    return React.createElement(SyntaxHighlighter, {
+    return React.createElement("figure", {
+      className: "highlight"
+    }, React.createElement(SyntaxHighlighter, {
       language: language,
       style: coy
-    }, value);
+    }, value));
   };
 
   return CodeBlock;
@@ -46,4 +48,4 @@ _defineProperty(CodeBlock, "defaultProps", {
 });
 
 export default CodeBlock;
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=code-block.js.map
