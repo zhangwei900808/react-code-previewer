@@ -2,9 +2,7 @@
 
 基于 React 的代码演示组件，方便开发人员发布自己的组件库预览组件及代码。
 
-<a id="Install" class="anchor"></a>
-
-## Install [#](#Install)
+## Install
 
 ```javascript
 yarn add react-code-previewer

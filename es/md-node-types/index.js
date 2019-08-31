@@ -1,8 +1,8 @@
 import CodeBlock from "./code-block";
-import HtmlBlock from "./html-block";
-export { CodeBlock, HtmlBlock };
+import HeadingBlock from "./heading-block";
+export { CodeBlock, HeadingBlock };
 export default {
   CodeBlock: CodeBlock,
-  HtmlBlock: HtmlBlock
+  HeadingBlock: HeadingBlock
 };
 //# sourceMappingURL=index.js.map

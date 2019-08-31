@@ -1,6 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const nodeExternals = require("webpack-node-externals");
@@ -133,11 +133,7 @@ module.exports = {
     // 生成运行时.js 文件，并写入到.html
     runtimeChunk: "single",
     minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: true
-      }),
+      new TerserPlugin({ cache: true, parallel: true, sourceMap: true }),
       new OptimizeCssAssetsPlugin({
         assetNameRegExp: /\.css\.*(?!.*map)/g, //注意不要写成 /\.css$/g
         cssProcessor: require("cssnano"),

@@ -2,9 +2,8 @@ import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import cls from "classnames";
 import ReactMarkdown from "react-markdown/with-html";
-import { CodeBlock, HtmlBlock } from "../md-node-types";
+import { CodeBlock, HeadingBlock } from "../md-node-types";
 // const htmlParser = require("react-markdown/plugins/html-parser");
-// var HtmlToReact = require("html-to-react");
 
 class MdPreviewer extends PureComponent {
   componentDidMount() {
@@ -61,7 +60,7 @@ class MdPreviewer extends PureComponent {
           // astPlugins={[parseHtml]}
           renderers={{
             code: CodeBlock,
-            definition: HtmlBlock
+            heading: HeadingBlock
           }}
         />
       </div>

@@ -78,7 +78,7 @@ function (_Component) {
       "data-clipboard-text": code,
       onSuccess: this.onClipSuccess
     }, React.createElement(Tooltip, {
-      title: this.state.cliped ? "已复制" : "复制到剪切板",
+      title: this.state.cliped ? "已复制" : "复制到剪贴板",
       onMouseLeave: this.onClipLeave
     }, React.createElement("div", {
       className: "copy"

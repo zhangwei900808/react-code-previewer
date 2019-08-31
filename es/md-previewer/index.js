@@ -2,9 +2,8 @@ import _inheritsLoose from "@babel/runtime/helpers/esm/inheritsLoose";
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import cls from "classnames";
-import ReactMarkdown from "react-markdown";
-import { CodeBlock, HtmlBlock } from "../md-node-types"; // const htmlParser = require("react-markdown/plugins/html-parser");
-// var HtmlToReact = require("html-to-react");
+import ReactMarkdown from "react-markdown/with-html";
+import { CodeBlock, HeadingBlock } from "../md-node-types"; // const htmlParser = require("react-markdown/plugins/html-parser");
 
 var MdPreviewer =
 /*#__PURE__*/
@@ -16,6 +15,26 @@ function (_PureComponent) {
   }
 
   var _proto = MdPreviewer.prototype;
+
+  _proto.componentDidMount = function componentDidMount() {
+    // Decode entities in the URL
+    // Sometimes a URL like #/foo#bar will be encoded as #/foo%23bar
+    window.location.hash = window.decodeURIComponent(window.location.hash);
+
+    var scrollToAnchor = function scrollToAnchor() {
+      var hashParts = window.location.hash.split("#");
+      console.log("hashParts", hashParts);
+
+      if (hashParts.length > 2) {
+        var hash = hashParts.slice(-1)[0];
+        console.log("hash=", hash);
+        document.querySelector("#" + hash).scrollIntoView();
+      }
+    };
+
+    scrollToAnchor();
+    window.onhashchange = scrollToAnchor;
+  };
 
   _proto.render = function render() {
     var md = this.props.md; // var processNodeDefinitions = new HtmlToReact.ProcessNodeDefinitions(React);
@@ -51,8 +70,8 @@ function (_PureComponent) {
       escapeHtml: false // astPlugins={[parseHtml]}
       ,
       renderers: {
-        code: CodeBlock // heading: HtmlBlock
-
+        code: CodeBlock,
+        heading: HeadingBlock
       }
     }));
   };

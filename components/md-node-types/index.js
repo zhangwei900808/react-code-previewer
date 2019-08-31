@@ -1,5 +1,5 @@
 import CodeBlock from "./code-block";
-import HtmlBlock from "./html-block";
+import HeadingBlock from "./heading-block";
 
-export { CodeBlock, HtmlBlock };
-export default { CodeBlock, HtmlBlock };
+export { CodeBlock, HeadingBlock };
+export default { CodeBlock, HeadingBlock };

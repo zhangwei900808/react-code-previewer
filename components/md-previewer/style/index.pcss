@@ -1,7 +1,12 @@
 .markdown-previewer-container {
   color: #0d1a26;
 
-  & h2 {
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
     &::before {
       display: block;
       height: 5rem;
@@ -10,22 +15,16 @@
     }
 
     &:hover {
-      & a {
+      & a.link {
         opacity: 1;
       }
     }
 
-    & .title {}
-
-    & .anchor {}
-
-    & a {
-
-
+    & a.link {
+      margin-left: 8px;
       display: inline-block;
       opacity: 0;
-      transition: opacity .3s ease;
+      transition: opacity 0.3s ease;
     }
   }
-
 }
