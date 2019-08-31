@@ -31,7 +31,7 @@ class HtmlBlock extends PureComponent {
   render() {
     console.log("--- this.props ---", this.props);
     const { value, children } = this.props;
-    return <>{children}</>;
+    return <>dfg s</>;
   }
 }
 

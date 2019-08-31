@@ -50,7 +50,7 @@ class CodePreviewer extends Component {
         <div className="cp-code">
           <div className="code-header">
             <Clipboard className="copy-wrapper" data-clipboard-text={code} onSuccess={this.onClipSuccess}>
-              <Tooltip title={this.state.cliped ? "已复制" : "复制到剪切板"} onMouseLeave={this.onClipLeave}>
+              <Tooltip title={this.state.cliped ? "已复制" : "复制到剪贴板"} onMouseLeave={this.onClipLeave}>
                 <div className="copy">
                   <Icon type="copy" style={{ fontSize: "16px" }} />
                 </div>
