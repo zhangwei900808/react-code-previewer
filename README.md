@@ -2,14 +2,6 @@
 
 ## Doc
 
-### Doc
-
-#### Doc
-
-##### Doc
-
-###### Doc
-
 [react-code-previewer doc](http://awbeci.xyz/react-code-previewer/)
 
 ## Install
