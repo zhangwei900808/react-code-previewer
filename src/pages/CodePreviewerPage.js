@@ -52,7 +52,7 @@ import { MdPreviewer } from "react-code-previewer";
   </Button>
 </CodePreviewer>`;
     return (
-      <Layout>
+      <Layout className="layout-container">
         <Header className="header-container">
           <div className="header-left">
             <img src={logo} width={32}></img>
@@ -62,8 +62,8 @@ import { MdPreviewer } from "react-code-previewer";
             <Icon type="github" style={{ fontSize: "28px" }} />
           </div>
         </Header>
-        <Content style={{ padding: "2rem 15rem" }}>
-          <div style={{ minHeight: "100vh" }}>
+        <Content className="content-container">
+          <div>
             <PreviewLayout>
               <MdPreviewer md={installMd}></MdPreviewer>
               <MdPreviewer md={previewLayoutMd}></MdPreviewer>

@@ -408,8 +408,6 @@ template {
 }
 
 @import url('../../styles/index.pcss');
-@import url('./markdown.pcss');
-
 
 .icon {
   width: 1em;
@@ -497,26 +495,67 @@ pre {
   font-size: 14px !important
 }
 
+.preview-layout-container {
+  background: #fff;
+  margin-bottom: 1rem;
+  padding: 1rem 3rem;
+}
 
-  .markdown-previewer-container table {
+@import url('../../styles/index.pcss');
+
+.markdown-previewer-container {
+  color: #0d1a26
+}
+
+.markdown-previewer-container h1,
+  .markdown-previewer-container h2,
+  .markdown-previewer-container h3,
+  .markdown-previewer-container h4,
+  .markdown-previewer-container h5,
+  .markdown-previewer-container h6 {
+    /* &::before {
+      display: block;
+      height: 5rem;
+      margin-top: -5rem;
+      content: "";
+    } */
+  }
+
+.markdown-previewer-container h1:hover a.link, .markdown-previewer-container h2:hover a.link, .markdown-previewer-container h3:hover a.link, .markdown-previewer-container h4:hover a.link, .markdown-previewer-container h5:hover a.link, .markdown-previewer-container h6:hover a.link {
+        opacity: 1;
+      }
+
+.markdown-previewer-container h1 a.link, .markdown-previewer-container h2 a.link, .markdown-previewer-container h3 a.link, .markdown-previewer-container h4 a.link, .markdown-previewer-container h5 a.link, .markdown-previewer-container h6 a.link {
+      margin-left: 8px;
+      display: inline-block;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+.markdown-previewer-container table {
     width: 100%;
     margin-bottom: 1rem;
   }
+
 .markdown-previewer-container tr {
     border-top: 1px solid #c6cbd1;
     background: #fff;
   }
+
 .markdown-previewer-container td {
     padding: 6px 13px;
     border: 1px solid #dfe2e5;
   }
+
 .markdown-previewer-container th {
     padding: 6px 13px;
     border: 1px solid #dfe2e5;
   }
+
 .markdown-previewer-container table tr:nth-child(2n) {
     background: #f6f8fa;
   }
+
 .markdown-previewer-container ul {
     display: block;
     -webkit-margin-before: 1em;
@@ -530,44 +569,27 @@ pre {
     -webkit-padding-start: 40px;
             padding-inline-start: 40px;
   }
+
 .markdown-previewer-container li {
     display: list-item;
     list-style-type: disc;
     text-align: -webkit-match-parent;
   }
+
 .markdown-previewer-container blockquote {
     color: #666;
     margin: 0;
     padding-left: 3em;
     border-left: 0.5em #eee solid;
   }
+
 .markdown-previewer-container hr {
     border-color: #edf2f938;
   }
 
-.markdown-previewer-container {
-  color: #0d1a26
-}
-.markdown-previewer-container h1::before, .markdown-previewer-container h2::before, .markdown-previewer-container h3::before, .markdown-previewer-container h4::before, .markdown-previewer-container h5::before, .markdown-previewer-container h6::before {
-      display: block;
-      height: 5rem;
-      margin-top: -5rem;
-      content: "";
-    }
-.markdown-previewer-container h1:hover a.link, .markdown-previewer-container h2:hover a.link, .markdown-previewer-container h3:hover a.link, .markdown-previewer-container h4:hover a.link, .markdown-previewer-container h5:hover a.link, .markdown-previewer-container h6:hover a.link {
-        opacity: 1;
-      }
-.markdown-previewer-container h1 a.link, .markdown-previewer-container h2 a.link, .markdown-previewer-container h3 a.link, .markdown-previewer-container h4 a.link, .markdown-previewer-container h5 a.link, .markdown-previewer-container h6 a.link {
-      margin-left: 8px;
-      display: inline-block;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-.preview-layout-container {
-  background: #fff;
-  margin-bottom: 1rem;
-  padding: 1rem 3rem;
+pre {
+  background: none !important;
+  font-size: 14px !important
 }
 
 /*# sourceMappingURL=react-code-previewer.css.map */

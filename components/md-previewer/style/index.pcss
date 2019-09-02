@@ -1,3 +1,5 @@
+@import url('../../styles/index.pcss');
+
 .markdown-previewer-container {
   color: #0d1a26;
 
@@ -7,12 +9,12 @@
   & h4,
   & h5,
   & h6 {
-    &::before {
+    /* &::before {
       display: block;
       height: 5rem;
       margin-top: -5rem;
       content: "";
-    }
+    } */
 
     &:hover {
       & a.link {
@@ -27,4 +29,62 @@
       transition: opacity 0.3s ease;
     }
   }
+
+  & table {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  & tr {
+    border-top: 1px solid #c6cbd1;
+    background: #fff;
+  }
+
+
+  & td {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+  }
+
+  & th {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+  }
+
+  & table tr:nth-child(2n) {
+    background: #f6f8fa;
+  }
+
+
+  & ul {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+  }
+
+  & li {
+    display: list-item;
+    list-style-type: disc;
+    text-align: -webkit-match-parent;
+  }
+
+
+  & blockquote {
+    color: #666;
+    margin: 0;
+    padding-left: 3em;
+    border-left: 0.5em #eee solid;
+  }
+
+  & hr {
+    border-color: #edf2f938;
+  }
+}
+
+pre {
+  background: none !important;
+  font-size: 14px !important
 }
