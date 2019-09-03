@@ -495,15 +495,10 @@ pre {
   font-size: 14px !important
 }
 
-.preview-layout-container {
-  background: #fff;
-  margin-bottom: 1rem;
-  padding: 1rem 3rem;
-}
-
 @import url('../../styles/index.pcss');
 
 .markdown-previewer-container {
+  font-size: 16px;
   color: #0d1a26
 }
 
@@ -590,6 +585,12 @@ pre {
 pre {
   background: none !important;
   font-size: 14px !important
+}
+
+.preview-layout-container {
+  background: #fff;
+  margin-bottom: 1rem;
+  padding: 1rem 3rem;
 }
 
 /*# sourceMappingURL=react-code-previewer.css.map */
