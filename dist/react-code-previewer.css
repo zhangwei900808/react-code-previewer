@@ -569,6 +569,7 @@ pre {
     display: list-item;
     list-style-type: disc;
     text-align: -webkit-match-parent;
+    padding-bottom: 1em;
   }
 
 .markdown-previewer-container blockquote {
