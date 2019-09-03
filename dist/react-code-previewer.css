@@ -499,7 +499,8 @@ pre {
 
 .markdown-previewer-container {
   font-size: 16px;
-  color: #0d1a26
+  color: #0d1a26;
+  line-height: 2
 }
 
 .markdown-previewer-container h1,
